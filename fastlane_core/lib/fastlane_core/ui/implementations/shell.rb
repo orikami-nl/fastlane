@@ -91,6 +91,9 @@ module FastlaneCore
         i = message.length
       else
         i = TTY::Screen.width - format.length
+        if i < 1
+          i = 1
+        end
       end
       success("-" * i)
       success(message)
